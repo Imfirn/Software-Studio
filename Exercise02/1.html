@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <style>
+      body {
+        margin: 0 23%;
+        
+      }
+      .top h1 {
+        background-color: gold;
+        display: flex;
+        align-items: center;
+        color: blue;
+        justify-content: center;
+      }
+
+      .article h2 {
+        display: flex;
+        align-items: center;
+        color: plum;
+        /* background-color: aqua; */
+        justify-content: center;
+      }
+
+      .reporter {
+        margin-bottom: 120px;
+        color: #5491be;
+        font-size: larger;
+      }
+
+      .reporter img {
+        float: right;
+        width: 240px;
+        border: 3px solid #5491be;
+      }
+      .reporter time {
+        color: hotpink;
+        font-style: italic;
+      }
+      article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 20px;
+        font-size: larger;
+      }
+      .col1 {
+        grid-column: 1;
+      }
+
+      .right-column {
+        grid-column: 2;
+      }
+      aside {
+        padding-bottom: 20px;
+      }
+      aside em {
+        float: right;       
+        border-bottom: 3px solid black;
+        border-top: 3px solid black;
+        font-size: 3rem;
+        padding-top: 15px;
+        padding-bottom: 15px;    
+        width: 285px;
+
+      }
+
+      progress {
+        -webkit-appearance: none;
+        appearance: none;
+        border-style: solid;
+        border-width: thin;
+        border-color: darkgray;
+      }
+      progress::-webkit-progress-bar {
+        background-color: gainsboro;
+      }
+      progress::-webkit-progress-value {
+        background: cornflowerblue;
+      }
+      .luckd {
+        padding-top: 5px;
+        width: 300px;
+        font-size: larger;
+      }
+      footer {
+        background-color: gold;
+        /* display: flex; */
+       text-align: center;
+       color: blue;
+       
+      }
+      .prog{
+        font-size: larger;
+ }
+      /* aside{
+        float: right;
+      } */
+      /* time {
+       
+      } */
+      /* div>time{
+        background-color: antiquewhite;
+        display: block;
+      } */
+    </style>
+  </head>
+  <body>
+    <header class="top"><h1>SW Studio Today</h1></header>
+    <header class="article"><h2>The record of the CSS class</h2></header>
+
+    <div class="reporter">
+      <img
+        src="https://previews.123rf.com/images/gmast3r/gmast3r1809/gmast3r180900199/109840480-brunette-businessman-avatar-man-face-profile-icon-concept-online-support-service-male-cartoon-charac.jpg"
+        alt="picture"
+        width="200"
+      />
+      Reported by <br />Ms. Kunkanit Thongkeng<br />
+      (Firn)<br />
+      ID 63010062<br /><br />
+      <time datetime="2023-02-01">Feb 01, 2023</time>
+    </div>
+
+    <article>
+      <section class="col1">
+        <h3>Introduction</h3>
+        <p>describe your background about CSS e.g.</p>
+        <ul>
+          <li>do you know CSS?</li>
+          <li>Have you ever been using CSS?</li>
+          <li>Have you ever worked with CSS before?</li>
+          <li>Have you any idea how CSS works?</li>
+          <li>What are you expecting from CSS?</li>
+          <li>etc.</li>
+        </ul>
+      </section>
+
+      <section class="col2">
+        <h3>The expectation</h3>
+        <p>Describe your expectations for today's class</p>
+        <p>You can list it like this:</p>
+        <ol>
+          <li>expect #1</li>
+          <li>expect #2</li>
+          <li>expect #3</li>
+        </ol>
+      </section>
+    </article>
+
+    <aside>
+      <p><em>your quote of today's class</em></p>
+    </aside>
+
+    <section class="prog">
+      <p>Progress of today's class <progress value="2" max="5"></progress></p>
+    </section>
+
+    <section class="luckd">
+      <p>register for lucky draw</p>
+      <form>
+        <fieldset>
+          <label>Name:</label><em>*</em>
+          <input
+            type="text"
+            id="name"
+            placeholder="John Smith"
+            autofocus
+            required
+          /><br />
+          <label>email:</label><em>*</em>
+          <input
+            type="email"
+            id="email"
+            placeholder="abc@def.com"
+            autofocus
+            required
+          /><br />
+          <label>Tel:</label><em>*</em>
+          <input
+            type="tel"
+            id="tel"
+            placeholder="0xx-xxxxxxx"
+            pattern="[0-9]{3}-[0-9]{7}"
+            autofocus
+            required
+          /><br />
+          <input type="submit" />
+        </fieldset>
+      </form>
+    </section>
+    <footer>ce.kmitl all rights reserved & copyright 2020</footer>
+  </body>
+</html>

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;500;700&display=swap');
+      body{
+        background-color: black;
+        margin: 0 5%;
+        font-family: 'Outfit', sans-serif;
+        color: white;
+      }
+      section.hero,
+      section.first-sec,
+      section.second-sec,
+      section.third-sec,
+      section.fourth-sec,
+      section.fifth-sec,
+      section.six{
+        padding: 5% 0;
+      }
+      
+      .txt1{
+        /* background-color: chartreuse; */
+        /* margin-left: 5px; */
+        /* border: 3px solid chartreuse;
+        border-radius:50%;     */
+        color: chartreuse;
+      }
+      .text-head{
+        font-size: 48px;
+        font-weight: 700;
+        border-bottom: 5px solid chartreuse;
+        /* background-color: aqua; */
+      }
+      .text-head-top{
+        font-size: 48px;
+        font-weight: 700;
+        
+      }
+      
+      .custom-circle-image {
+  width: 50px; /* note i used vw not px for better responsive */
+  height: 50px;
+}
+.custom-circle-image-2 {
+  width: 150px; /* note i used vw not px for better responsive */
+  height: 150px;
+}
+.example{
+  margin-top: 52px;
+}
+.name-ex{
+  font-size: 15px;
+  font-weight: 200;
+}
+
+.nav-link:hover{
+  /* text-decoration: underline; */
+  border-bottom: 2px solid chartreuse;
+}
+
+@media (max-width:1080px) {
+
+      .text-head{
+        font-size: 32px;
+        
+      }
+      .text-head-top{
+        font-size: 32px;
+        
+      }
+
+      
+  
+      
+}
+
+@media (max-width:1040px) {
+
+      .text-head{
+        font-size: 32px;
+        
+      }
+      .text-head-top{
+        font-size: 32px;
+       
+      }
+
+      .name-ex{
+  font-size: 12px;
+
+}
+      
+}
+@media (max-width:575px) {
+  /* body{
+    background-color: rebeccapurple;
+  } */
+  section.hero,
+      section.first-sec,
+      section.second-sec,
+      section.third-sec,
+      section.fourth-sec,
+      section.fifth-sec,
+      section.six{
+        text-align: center;
+      }
+   
+      .text-head{
+        text-align: center;
+        margin-top: 50px;
+      }
+      .text-head-top{
+        text-align: center;
+       
+      }
+
+  
+      
+}
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-black fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#home">Ocean</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px"
+          >
+            <li class="nav-item">
+              <a class="nav-link  text-white" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#seabirds">Seabirds</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#oceanfish">Ocean Fishes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#marine">Marine Mammals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#seatutle">Sea Turtles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#shellfish">Cephalopods</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#sharks">Sharks</a>
+            </li>
+          
+       
+         
+        
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero" id="home">
+      <div class="container-md">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 " id="herosec">
+          <div class="col">            
+            <div class="mb-5  text-head-top" ><p> Marine Life</p>  <div class="txt1"><p>Encyclopedia</p></div></div>
+            <p>Explore the Marine Life Encyclopedia to learn fun facts and more about your favorite marine animals. From sharks and sea turtles to ecosystems and corals, you’re in the right place to take a deep dive into life under the sea.</p>
+          </div>
+          <div class="col">            
+            <img src="https://scontent.fbkk5-7.fna.fbcdn.net/v/t1.6435-9/68697568_10156022103370378_7645555619587424256_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9267fe&_nc_eui2=AeFYER4cp9adcXoek5JCPi9TPxu172AbCNs_G7XvYBsI22cRI-alVN5nWlPaGIVrtUbjwsDf2RhIGQR1U-Lqazm8&_nc_ohc=UOtd8lcXjLsAX-MZf4r&_nc_ht=scontent.fbkk5-7.fna&oh=00_AfANVswaMp9D8AYs5kLkQexcsCv1EEHRBz74HC_ejNsevA&oe=640B3130" class="w-100 h-100 hero-pic">
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="first-sec" id="seabirds">
+      <div class="container-md">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-2">
+          <div class="col">            
+            <img src="https://cdn.britannica.com/54/158754-050-CFE5C585/Galapagos-penguin.jpg" class="w-100 h-100 s-pic">
+
+          </div>
+          <div class="col ps-5">    
+            <div class="mb-5 d-flex text-head" >Seabirds</div>
+            <p>Oceans aren’t just for fish. Seabirds depend on healthy oceans for food and much more. From the emperor penguin to the blue-footed booby to the brown pelican, seabirds come in all shapes and sizes (some can’t even fly) and play a vital role in ocean ecosystems.</p>        
+            <div class=" ms-1 example">example:
+              <div class="row mt-3">
+                <div class="col-sm-2  align-content-center text-center">
+                  <div class="border-0">
+                    <div class="rounded-circle overflow-hidden mx-auto custom-circle-image ">
+                      <img class="w-100 h-100" src="data:image/jpeg;base64,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" alt="Card image cap">
+                    </div>
+                   <p class="name-ex mt-1"> Southern Giant Petrel </p>
+                  </div>
+                </div>
+                <div class="col-sm-2 text-center">
+                  <div class="border-0">
+                    <div class="rounded-circle overflow-hidden mx-auto custom-circle-image ">
+                      <img class="w-100 h-100" src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/73700741/1800" alt="Card image cap">
+                    </div>
+                    <p class="name-ex mt-1">Kelp Gull</p>
+                  </div>
+                </div>
+                <div class="col-sm-2 text-center">
+                  <div class="border-0">
+                    <div class="rounded-circle overflow-hidden mx-auto custom-circle-image ">
+                      <img class="w-100 h-100" src="https://www.antarctica.gov.au/site/assets/files/45587/rs35438_dsc_4677.1600x0.jpg" alt="Card image cap">
+                    </div>
+                    <p class="name-ex mt-1 ">Royal Penguin</p>
+                  </div>
+                </div>
+               
+                </div>
+          
+              </div>
+
+            </div>
+          </div>
+        </div>
+     
+
+    </section>
+
+    <section class="second-sec" id="oceanfish">
+      <div class="container-md">
+        <div class=" row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-2">
+          
+          <div class="col ps-5">    
+            <div class="mb-5 d-flex text-head" >Ocean Fishes</div>
+            <p>Some estimates report the world’s oceans are home to 20,000 species of fish. Ocean fishes come in all shapes, sizes, colors and live in drastically different depths and temperatures. Despite this diversity, the United Nations Food and Agriculture Organization reported in 2016 that 89.5% of fish stocks are fully fished or overfished.</p>        
+            <div class=" ms-1 example">example:
+              <div class="row mt-3">
+                <div class="col-sm-2  align-content-center text-center">
+                  <div class="border-0">
+                    <div class="rounded-circle overflow-hidden mx-auto custom-circle-image ">
+                      <img class="w-100 h-100" src="https://www.pewtrusts.org/-/media/post-launch-images/2020/12/0011633rhejpgmaster/16x9_m.jpg" alt="Card image cap">
+                    </div>
+                   <p class="name-ex mt-1">Atlantic Bluefin Tuna</p>
+                  </div>
+                </div>
+                <div class="col-sm-2 text-center">
+                  <div class="border-0">
+                    <div class="rounded-circle overflow-hidden mx-auto custom-circle-image ">
+                      <img class="w-100 h-100" src="https://static.wikia.nocookie.net/naturerules1/images/6/63/Ca27cd050396c9c8779d2eb9bc32dde3.jpg/revision/latest?cb=20210615170913" alt="Card image cap">
+                    </div>
+                    <p class="name-ex mt-1">Pygmy Seahorse</p>
+                  </div>
+                </div>
+                <div class="col-sm-2 text-center">
+                  <div class="border-0">
+                    <div class="rounded-circle overflow-hidden mx-auto custom-circle-image ">
+                      <img class="w-100 h-100" src="https://i.natgeofe.com/n/23864564-d137-4566-a170-3144807cc0c9/blue-marlin.jpg" alt="Card image cap">
+                    </div>
+                    <p class="name-ex mt-1 ">Blue Marlin</p>
+                  </div>
+                </div>
+               
+                </div>
+          
+              </div>
+
+            </div>
+            <div class="col">            
+              <img src="https://media.istockphoto.com/id/589120498/photo/tropical-fishes-underwater.jpg?s=612x612&w=0&k=20&c=uTNs107Yw3spyLx6hFQavW_zGBO9usaGLk2mpEYFyos=" class="w-100 h-100 s-pic">
+  
+            </div>
+          </div>
+        </div>
+     
+
+    </section>
+
+    <section class="third-sec" id="marine">
+      <div class="container-md d-flex justify-content-center ">
+        <div class=" text-head  text-center">Marine Mammals</div>
+      </div>
+      <div class="container-md  text-center ">
+        <p class="d-block my-5">Dolphins, whales, sea otters and other marine mammals capture the imagination and demand the affections of people around the world. Many of these marine animals adhere to complex social systems and exhibit remarkable intelligence.</p>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5">
+         
+          <div class="col">            
+              <div class="border-0">
+                <div class="rounded-circle overflow-hidden mx-auto custom-circle-image-2 ">
+                  <img class="w-100 h-100" src="https://i.natgeofe.com/k/ba0f2395-74c7-4a2b-82d2-1a1f44d213b2/beluga-whale-emerging-ocean_4x3.jpg" alt="Card image cap">
+                </div>
+                <p class="name-ex mt-1 ">Beluga Whale</p>          
+            </div>
+          </div>
+          <div class="col">            
+            <div class="border-0">
+              <div class="rounded-circle overflow-hidden mx-auto custom-circle-image-2 ">
+                <img class="w-100 h-100" src="https://www.biologicaldiversity.org/assets/img/species/mammals/BeardedSealFlickr_foilistpeter.jpg" alt="Card image cap">
+              </div>
+              <p class="name-ex mt-1 ">Bearded Seal</p>          
+          </div>
+        </div>
+        <div class="col">            
+          <div class="border-0">
+            <div class="rounded-circle overflow-hidden mx-auto custom-circle-image-2 ">
+              <img class="w-100 h-100" src="https://images.squarespace-cdn.com/content/v1/5cb43f48523958d6ab567825/1626634544603-841RR0WIA84ANJBT8IAD/kokh-1.jpg?format=1000w" alt="Card image cap">
+            </div>
+            <p class="name-ex mt-1 ">Dugong</p>          
+        </div>
+      </div>
+      <div class="col">            
+        <div class="border-0">
+          <div class="rounded-circle overflow-hidden mx-auto custom-circle-image-2 ">
+            <img class="w-100 h-100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg/800px-Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg" alt="Card image cap">
+          </div>
+          <p class="name-ex mt-1 ">Sea Otter</p>          
+      </div>
+    </div>
+    <div class="col">            
+      <div class="border-0">
+        <div class="rounded-circle overflow-hidden mx-auto custom-circle-image-2 ">
+          <img class="w-100 h-100" src="https://upload.wikimedia.org/wikipedia/commons/3/37/Killerwhales_jumping.jpg" alt="Card image cap">
+        </div>
+        <p class="name-ex mt-1 ">Orca</p>          
+    </div>
+  </div>
+        </div>
+      </div>
+    
+
+    </section>
+
+    <section class="fourth-sec" id="seatutle">
+      <div class="container-md">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-2">
+          <div class="col">            
+            <img src="https://d2zp5xs5cp8zlg.cloudfront.net/image-53658-800.jpg" class="w-100 h-100 s-pic">
+
+          </div>
+          <div class="col ps-5">    
+            <div class="mb-5 d-flex text-head" >Sea Turtles & Reptiles</div>
+            <p>Sea turtles have been around since the time of the dinosaurs, but all seven species in the world face potential extinction. Oceana runs proven campaigns to protect sea turtles from death as bycatch, habitat degradation and other issues.</p>        
+            <div class=" ms-1 example">example:
+              <div class="row mt-3">
+                <div class="col-sm-2  align-content-center text-center">
+                  <div class="border-0">
+                    <div class="rounded-circle overflow-hidden mx-auto custom-circle-image ">
+                      <img class="w-100 h-100" src="https://media.australian.museum/media/dd/images/1600px-Green_Turtle_Chelonia_mydas_6133097542..width-800.46f18be.jpg">
+                    </div>
+                   <p class="name-ex mt-1"> Green Turtle </p>
+                  </div>
+                </div>
+                <div class="col-sm-2 text-center">
+                  <div class="border-0">
+                    <div class="rounded-circle overflow-hidden mx-auto custom-circle-image ">
+                      <img class="w-100 h-100" src="https://www.blackturtledive.com/wp-content/uploads/2021/01/blackturtledive.com-banded-sea-snake-koh-tao.jpg" alt="Card image cap">
+                    </div>
+                    <p class="name-ex mt-1">Banded Sea Krait</p>
+                  </div>
+                </div>
+                <div class="col-sm-2 text-center">
+                  <div class="border-0">
+                    <div class="rounded-circle overflow-hidden mx-auto custom-circle-image ">
+                      <img class="w-100 h-100" src="https://cff2.earth.com/uploads/2019/04/15183147/marine-2391542.jpg" alt="Card image cap">
+                    </div>
+                    <p class="name-ex mt-1 ">Marine Iguana</p>
+                  </div>
+                </div>
+               
+                </div>
+          
+              </div>
+
+            </div>
+          </div>
+        </div>
+     
+
+    </section>
+
+    <section class="fifth-sec" id="shellfish">
+      <div class="container-md">
+        <div class="row  row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-2">
+          
+          <div class="col ps-5">    
+            <div class="mb-5 d-flex text-head" >Cephalopods, Crustaceans & Other Shellfish</div>
+            <p>Cephalopods, crustaceans and other shellfish play important roles in maintaining healthy ocean systems. Cephalopods like the southern blue-ringed octopus and the vampire squid look other-worldly, while Atlantic blue crab and American lobster are the focus of major fishing industries.</p>        
+            <div class=" ms-1 example">example:
+              <div class="row mt-3">
+                <div class="col-sm-2  align-content-center text-center">
+                  <div class="border-0">
+                    <div class="rounded-circle overflow-hidden mx-auto custom-circle-image ">
+                      <img class="w-100 h-100" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Nautilus_Palau.JPG" alt="Card image cap">
+                    </div>
+                   <p class="name-ex mt-1">Chambered Nautilus</p>
+                  </div>
+                </div>
+                <div class="col-sm-2 text-center">
+                  <div class="border-0">
+                    <div class="rounded-circle overflow-hidden mx-auto custom-circle-image ">
+                      <img class="w-100 h-100" src="https://copr.nrs.ucsb.edu/sites/default/files/styles/top_image/public/images/species/Acorn%20Barnacle.jpeg?itok=_4vaj2qI" alt="Card image cap">
+                    </div>
+                    <p class="name-ex mt-1">Acorn Barnacle</p>
+                  </div>
+                </div>
+                <div class="col-sm-2 text-center">
+                  <div class="border-0">
+                    <div class="rounded-circle overflow-hidden mx-auto custom-circle-image ">
+                      <img class="w-100 h-100" src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Limulus_polyphemus_%28aq.%29.jpg" alt="Card image cap">
+                    </div>
+                    <p class="name-ex mt-1 ">Horseshoe Crab</p>
+                  </div>
+                </div>
+               
+                </div>
+          
+              </div>
+
+            </div>
+            <div class="col">            
+              <img src="https://cdn.britannica.com/24/187424-131-2EE29390/Veined-octopus.jpg" class="w-100 h-100 s-pic">
+  
+            </div>
+          </div>
+        </div>
+     
+
+    </section>
+   
+    <section class="six-sec" id="sharks">
+      <div class="container-md d-flex justify-content-center ">
+        <div class=" text-head  text-center">Sharks & Rays</div>
+      </div>
+      <div class="container-md  text-center ">
+        <p class="d-block my-5">Sharks have played a vital role in maintaining healthy oceans for hundreds of millions of years as a top predator. More than 450 species of sharks cruise the world’s oceans, ranging in size from 8 inches to a whopping 40 feet long. But today, nearly one in four sharks and their relatives are threatened with extinction. A major cause is the demand for shark fins. Every year, fins from as many as 73 million sharks end up in the global fin trade.</p>
+        <div class="row">
+          <div class="col">
+            <img class='w-100 h-100 ' src="https://i0.wp.com/news.northeastern.edu/wp-content/uploads/2022/07/great_white_1400.jpg?fit=1400%2C933&ssl=1">
+          </div>
+          <div class="col">        
+            <img class='w-100 h-100' src="https://www.localdivethailand.com/wp-content/uploads/2019/06/giant-manta-ray-in-thailand.jpg">
+          </div>
+        </div>
+      </div>
+    
+
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

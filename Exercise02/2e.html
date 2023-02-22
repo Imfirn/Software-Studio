@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 002-01</title>
+    <style>
+      body {
+        margin: 0 10%;
+      }
+      .contrainer-1 {
+        display: flex;
+        align-items: center;
+        /* background-color: aqua; */
+        justify-content: center;
+      }
+      .top {
+        background-color: gold;
+
+        display: flex;
+        align-items: center;
+        /* background-color: aqua; */
+        color: blue;
+        justify-content: center;
+      }
+      .t-text {
+        color: plum;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .left-column {
+        grid-column: 1;
+      }
+
+      .right-column {
+        grid-column: 2;
+      }
+      div#pic1.right-column {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+      }
+      progress {
+        -webkit-appearance: none;
+        appearance: none;
+        border-style: solid;
+        border-width: thin;
+        border-color: darkgray;
+      }
+      progress::-webkit-progress-bar {
+        background-color:gainsboro;
+      }
+      progress::-webkit-progress-value {
+        background: cornflowerblue;
+      }
+      fieldset{
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <h1>SW Studio TODAY</h1>
+    </div>
+
+    <div class="contrainer-1">
+      <h2 class="t-text">The record of the CSS class</h2>
+    </div>
+    <div class="grid-container">
+      <div class="left-column">
+        <p>
+          Reported by <br />
+          Mr. or Ms. Xxxx xxxx <br />
+          (nickname)<br />
+          ID yyyyyyyy
+        </p>
+        <time datetime="2020-02-14"><i>Fri 14,2020</i></time>
+      </div>
+      <div class="right-column" id="pic1">
+        <img
+          src="https://images.pexels.com/photos/3771097/pexels-photo-3771097.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          width="200"
+          height="200"
+        />
+      </div>
+    </div>
+    <div class="grid-container">
+      <div class="left-column">
+        <h3>Introduction</h3>
+        <p>describe your background about CSS e.g.</p>
+        <ul>
+          <li>do you know CSS?</li>
+          <li>Have you ever been using CSS?</li>
+          <li>Have you ever worked with CSS before?</li>
+          <li>Have you any idea how CSS works?</li>
+          <li>What are you expecting from CSS?</li>
+          <li>etc.</li>
+        </ul>
+
+        <label for="file">Progress of today's class </label>
+        <progress id="file" value="32" max="100">32%</progress>
+        <br/> <br/>
+        <p>Register for lucky draw</p>
+        <form>
+          <fieldset>
+            <legend>Contact Information</legend>
+            <div>
+              <label for="name">Name:*</label>
+              <input type="text" id="name" name="name" placeholder="John Smith"/>
+            </div>
+          
+            <div>
+              <label for="email">email:*</label>
+              <input type="email" id="email" name="email" placeholder="abc@def.com" />
+            </div>
+            <div>
+              <label for="tel">Tel:*</label>
+              <input type="tel" id="tel" name="tel" placeholder="0xx-xxxxxxx" />
+            </div>
+            <input type="submit" value="Submit"></input>
+          </fieldset>
+        </form>
+      </div>
+      <div class="right-column">
+        <h3>The expectation</h3>
+        <p>Describe your expectation for today's class</p>
+        <p>You can list it like this:</p>
+        <ol>
+          <li>expect #1</li>
+          <li>expect #2</li>
+          <li>expect #3</li>
+        </ol>
+      </div>
+    </div>
+    <div class="top">
+      <footer> <p>ce.kmitl all rights reserved & copyright 2020</p></footer>
+    </div>
+  </body>
+</html>

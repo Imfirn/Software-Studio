@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <div id="maincontainer"></div>
+    <script>
+      const main = document.getElementById("maincontainer");
+      //   hearder
+      let str = "Excercise 04: JavaScript&DOM";
+      const headerText = document.createElement("h2");
+      headerText.innerHTML = str;
+      headerText.setAttribute("class", "txt1");
+
+      // button Date time
+      const divBtn = document.createElement("div");
+
+      const btnDateTime = document.createElement("button");
+      btnDateTime.setAttribute("class", "btn");
+      btnDateTime.textContent = "Click me to display Date and Time";
+      btnDateTime.style.fontSize = "15px";
+      btnDateTime.style.position = "absolute";
+
+      //   btnDateTime config
+      const clockWorker = new Worker("ButtonWoker.js");
+      let clkStart = false;
+
+      btnDateTime.addEventListener("click", function () {
+        clkStart = !clkStart;
+        updateBtn();
+
+      });
+
+      function updateBtn() {
+        if (clkStart) {
+          clockWorker.postMessage("start"); //start time
+        } else {
+          clockWorker.postMessage("stop"); //stop time and go back to intial position
+          btnDateTime.style.position = "absolute";
+          btnDateTime.style.top = "";
+          btnDateTime.style.right = "";
+        }
+      }
+        //set style from data in msg worker ; start time and move to top right of screen(fixed)
+      clockWorker.addEventListener("message", (event) => {
+        btnDateTime.textContent = event.data.time;
+        btnDateTime.style.backgroundColor = event.data.btncolor;
+        btnDateTime.style.color = event.data.txtColor;
+        btnDateTime.style.position = event.data.style.position;
+        btnDateTime.style.top = event.data.style.top;
+        btnDateTime.style.right = event.data.style.right;
+      });
+
+      divBtn.appendChild(btnDateTime);
+
+      //   Personal info
+      const Personal_info = document.createElement("div");
+      Personal_info.style.marginTop = "65px";
+      const btnInfo = document.createElement("a");
+      btnInfo.innerHTML = "Personal Info";
+      btnInfo.href = "";
+      btnInfo.style.color = "pink";
+      // handle the mouse hover event
+      btnInfo.addEventListener("mouseover", () => {
+        btnInfo.style.backgroundColor = "yellow";
+        btnInfo.style.color = "blue";
+      });
+      btnInfo.addEventListener("mouseout", () => {
+        btnInfo.style.backgroundColor = "transparent";
+        btnInfo.style.color = "pink";
+      });
+      // handle the mouse click event
+      let clickInfo = false;
+      btnInfo.addEventListener("click", () => {
+        event.preventDefault();
+        clickInfo = !clickInfo;       
+        openBtn();
+      });
+
+      Personal_info.appendChild(btnInfo);
+
+      let info = [
+        "Kunkanit Thongkeng, ID: 63010062",
+        "Subject: Software Studio",
+        "Semester: 2 ",
+      ];
+
+      const listInfo = document.createElement("ul");
+
+      for (let i = 0; i <= 2; i++) {
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(info[i]));
+        listInfo.appendChild(li);
+      }
+
+      function openBtn() {
+        if (clickInfo) {
+        
+          // show list info
+          listInfo.style.visibility = "visible";
+          Personal_info.appendChild(listInfo);
+        } else {
+          
+          // hide list info
+          listInfo.style.visibility = "hidden";
+          Personal_info.removeChild(listInfo);
+        }
+      }
+
+      // Snapshot select name list to change img
+      const snap = document.createElement("h1");
+      snap.innerHTML = "Snapshots";
+      snap.style.marginBottom = "30px";
+
+      let snapTopic = ["Fireworks", "Crest", "Action", "Buffalo"];
+      let showPic = "";
+      const snapList = document.createElement("ul");
+
+      for (let i = 0; i <= 3; i++) {
+        const li = document.createElement("li");
+        const link = document.createElement("a");
+
+        link.appendChild(document.createTextNode(snapTopic[i]));
+        link.setAttribute("id", `${snapTopic[i]}`);
+        link.href = "";
+        link.style.color = "blue";
+        link.style.setProperty("color", "blue", "visited");
+
+        // handle the mouse click event to change img
+        link.addEventListener("click", (event) => {
+          event.preventDefault();          
+          showPic = `${link.id}`;          
+          updateImg(showPic);
+        });
+        li.appendChild(link);
+        snapList.appendChild(li);
+      }
+
+      const divSnap = document.createElement("div");
+      divSnap.style.marginTop = "30px";
+
+      const imgLink = {
+        Fireworks:
+          "https://rimage.gnst.jp/livejapan.com/public/article/detail/a/30/00/a3000201/img/basic/a3000201_main.jpg?20220413151100",
+        Crest:
+          "https://png.pngtree.com/element_our/sm/20180514/sm_bd24b4e360b29132799701a0b2826a87.jpg",
+        Action:
+          "https://www.gardeningknowhow.com/wp-content/uploads/2007/03/garden-health.jpg",
+        Buffalo:
+          "https://storyteller.travel/wp-content/uploads/2018/12/cape-buffalo-facts.jpg",
+      };
+      const imgSnap = document.createElement("img");
+      imgSnap.src = "https://s.isanook.com/mv/0/ud/8/42529/head.jpg";  //default img
+      imgSnap.style.width = "500px";
+      function updateImg(pic) {
+        imgSnap.src = imgLink[pic];
+      }
+
+      divSnap.appendChild(imgSnap);
+
+      // append element > main
+      main.appendChild(headerText);
+      main.appendChild(divBtn);
+      main.appendChild(Personal_info);
+      main.appendChild(snap);
+      main.appendChild(snapList);
+      main.appendChild(divSnap);
+    </script>
+  </body>
+</html>
